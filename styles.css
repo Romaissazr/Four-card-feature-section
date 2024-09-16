@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    background:  hsl(0, 0%, 98%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px 0;
+  
+}
+.p{
+    max-width: 450px;
+}
+.h2{
+  
+    font-weight: 200;
+}
+.feature {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: 220px 220px;
+    gap: 20px;
+    padding: 20px;
+ 
+   
+    
+  }
+
+  section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-align: start;
+    position: relative;
+  }
+  section img{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .one {
+    grid-row: span 2; 
+    height: 220px;
+    margin-top: 100px;
+    border-top: 5px solid hsl(180, 62%, 55%);
+   
+  }
+
+  .two {
+    grid-column: span 1;
+    border-top: 5px solid  hsl(0, 78%, 62%);
+  }
+
+  .three {
+    grid-column: 2 / 3; 
+   
+ 
+    border-top: 5px solid   hsl(212, 86%, 64%); 
+    order: 4;
+  }
+
+  .four {
+  
+   height: 220px;
+   margin-top: 100px;
+    border-top: 5px solid hsl(34, 97%, 64%);
+    grid-row: span 2; 
+    order: 3;
+  }
+
+  h3 {
+    color: hsl(234, 12%, 34%);
+  }
+
+  p {
+    margin-top: 10px;
+  
+    color:  hsl(229, 6%, 66%);
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .four {
+      grid-column: span 1;
+    }
+  }
+ @media screen and (max-width: 376px) {
+    .feature {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 220px);
+    }
+
+    .one, .three, .four {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: auto;
+        margin-top: 0;
+    }
+    .three{
+        order: 3;
+    }
+}
